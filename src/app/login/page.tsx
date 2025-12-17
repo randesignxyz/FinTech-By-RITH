@@ -57,6 +57,20 @@ export default function LoginPage() {
                     <Button type="submit" fullWidth isLoading={isLoading}>
                         Sign In
                     </Button>
+                    <div style={{ display: "flex", alignItems: "center", gap: "1rem", margin: "1rem 0" }}>
+                        <div style={{ height: "1px", flex: 1, backgroundColor: "var(--border)" }} />
+                        <span style={{ fontSize: "0.75rem", color: "var(--text-tertiary)" }}>OR</span>
+                        <div style={{ height: "1px", flex: 1, backgroundColor: "var(--border)" }} />
+                    </div>
+                    <Button
+                        type="button"
+                        variant="secondary"
+                        fullWidth
+                        onClick={() => login("guest@demo.com")}
+                        disabled={isLoading}
+                    >
+                        Continue as Guest
+                    </Button>
                 </form>
             </Card>
 
